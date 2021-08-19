@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="396.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Calculator">
+   <VBox prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <padding>
+         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+      </padding>
+      <TextField fx:id="equationTextField" alignment="CENTER_RIGHT" editable="false" prefHeight="90.0" prefWidth="600.0">
+         <VBox.margin>
+            <Insets bottom="10.0" />
+         </VBox.margin>
+      </TextField>
+      <TextField fx:id="resultTextField" alignment="CENTER_RIGHT" editable="false" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="600.0" />
+      <HBox alignment="CENTER" layoutX="10.0" layoutY="110.0" prefHeight="100.0" prefWidth="200.0">
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
+         <Button minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onAction="#insertSeven" text="7">
+            <HBox.margin>
+               <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+            </HBox.margin>
+            <font>
+               <Font size="23.0" />
+            </font>
+         </Button>
+         <Button layoutX="10.0" layoutY="10.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onAction="#insertEight" text="8">
+            <HBox.margin>
+               <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+            </HBox.margin>
+            <font>
+               <Font size="23.0" />
+            </font>
+         </Button>
+         <Button layoutX="10.0" layoutY="10.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onAction="#insertNine" text="9">
+            <HBox.margin>
+               <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+            </HBox.margin>
+            <font>
+               <Font size="23.0" />
+            </font>
+         </Button>
+         <Button layoutX="62.0" layoutY="10.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onAction="#clearAll" text="AC" textAlignment="CENTER">
+            <HBox.margin>
+               <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+            </HBox.margin>
+            <font>
+               <Font size="23.0" />
+            </font>
+         </Button>
+         <Button layoutX="62.0" layoutY="10.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onAction="#deleteLastSign" text="⌫" textAlignment="CENTER">
+            <HBox.margin>
+               <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+            </HBox.margin>
+            <font>
+               <Font size="23.0" />
+            </font>
+         </Button>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="10.0" layoutY="110.0" prefHeight="100.0" prefWidth="200.0">
+         <Button minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onAction="#insertFour" text="4">
+            <HBox.margin>
+               <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+            </HBox.margin>
+            <font>
+               <Font size="23.0" />
+            </font>
+         </Button>
+         <Button layoutX="10.0" layoutY="10.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onAction="#insertFive" text="5">
+            <HBox.margin>
+               <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+            </HBox.margin>
+            <font>
+               <Font size="23.0" />
+            </font>
+         </Button>
+         <Button layoutX="10.0" layoutY="10.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onAction="#insertSix" text="6">
+            <HBox.margin>
+               <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+            </HBox.margin>
+            <font>
+               <Font size="23.0" />
+            </font>
+         </Button>
+         <Button layoutX="62.0" layoutY="10.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onAction="#insertMultipleSign" text="x" textAlignment="CENTER">
+            <HBox.margin>
+               <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+            </HBox.margin>
+            <font>
+               <Font size="23.0" />
+            </font>
+         </Button>
+         <Button layoutX="62.0" layoutY="10.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onAction="#insetDivideSign" text="÷" textAlignment="CENTER">
+            <HBox.margin>
+               <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+            </HBox.margin>
+            <font>
+               <Font size="23.0" />
+            </font>
+         </Button>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="10.0" layoutY="110.0" prefHeight="100.0" prefWidth="200.0">
+         <Button minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onAction="#insertOne" text="1">
+            <HBox.margin>
+               <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+            </HBox.margin>
+            <font>
+               <Font size="23.0" />
+            </font>
+         </Button>
+         <Button layoutX="10.0" layoutY="10.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onAction="#insertTwo" text="2">
+            <HBox.margin>
+               <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+            </HBox.margin>
+            <font>
+               <Font size="23.0" />
+            </font>
+         </Button>
+         <Button layoutX="10.0" layoutY="10.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onAction="#insertThree" text="3">
+            <HBox.margin>
+               <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+            </HBox.margin>
+            <font>
+               <Font size="23.0" />
+            </font>
+         </Button>
+         <Button layoutX="62.0" layoutY="10.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onAction="#insertPlusSign" text="+" textAlignment="CENTER">
+            <HBox.margin>
+               <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+            </HBox.margin>
+            <font>
+               <Font size="23.0" />
+            </font>
+         </Button>
+         <Button layoutX="62.0" layoutY="10.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onAction="#insertMinusSign" text="-" textAlignment="CENTER">
+            <HBox.margin>
+               <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+            </HBox.margin>
+            <font>
+               <Font size="23.0" />
+            </font>
+         </Button>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0">
+         <Button disable="true" minHeight="60.0" minWidth="60.0" mnemonicParsing="false">
+            <HBox.margin>
+               <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+            </HBox.margin>
+         </Button>
+         <Button layoutX="10.0" layoutY="10.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onAction="#insertZero" text="0">
+            <HBox.margin>
+               <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+            </HBox.margin>
+            <font>
+               <Font size="23.0" />
+            </font>
+         </Button>
+         <Button layoutX="10.0" layoutY="10.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onAction="#insertComma" text=".">
+            <HBox.margin>
+               <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+            </HBox.margin>
+            <font>
+               <Font size="23.0" />
+            </font>
+         </Button>
+         <Button defaultButton="true" layoutX="62.0" layoutY="10.0" minHeight="60.0" minWidth="125.0" mnemonicParsing="false" onAction="#calculateEquation" text="=">
+            <HBox.margin>
+               <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+            </HBox.margin>
+            <font>
+               <Font size="23.0" />
+            </font>
+         </Button>
+      </HBox>
+   </VBox>
+</AnchorPane>
